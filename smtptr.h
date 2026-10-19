@@ -20,7 +20,7 @@ namespace smtptr {
 
          ~shptr(){
             if(ref_cnt){
-                *ref_cnt--;
+                (*ref_cnt)--;
                 if(*ref_cnt == 0){
                     delete ptr;
                     delete ref_cnt;
@@ -53,6 +53,10 @@ namespace smtptr {
 
          T* operator->()const{
             return ptr;
+         }
+
+         int getCount() const{
+            return *ref_cnt;
          }
 
          };
