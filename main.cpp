@@ -1,5 +1,3 @@
-#include <iostream>
-#include <cstdio>
 #include "smtptr.h"
 
 using std::cout;
